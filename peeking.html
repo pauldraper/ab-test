@@ -1,0 +1,28 @@
+The most common flaw in A/B tests: peeking
+
+Statistics can be unintitive.
+
+Stastistics can compute tendenticies.
+
+When a test is significant p = 0.05, it means that if the populations are the same, our process has a 5% change of erroneously concluding the populations are different.
+
+Notice that the significane level <em>depends on our process</em>.
+
+Looking at the results, running a significance tests, and using that to repeat further 
+
+The problem is this: most statistical tests were derived for lab-type studies. 100 petri dishes with treatment A, 100 treatment dishes with treatment B, we wait, see what happens, and publish.
+
+This doesn't match the paradigm of website A/B tests.
+
+* Expensive failure. Test failures impact the bottom line.
+* Limited testing rate. We have access to a lot of samples, but only if we wait.
+* A fast feedback loop. We can implement changes in days rather than years. Long tests are unsive.
+
+There are 3 solutions:
+
+
+1. Run A/B tests with a fixed sample size. This is usually not desirable. If we get very positive results, we can't end early. If we get very negative results, we can't cut our losses. And if we get inconclusive results, we can't extend the length of our test.
+
+2. Adjust the p-value. You can check as often as you want, but accout for the bias.
+
+3. Use Bayesian statistics. 
