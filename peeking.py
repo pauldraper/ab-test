@@ -19,7 +19,7 @@ if __name__ == '__main__':
     algorithm = peeking.algorithm.FrequencyTest((args.A, args.B), args.p_value, args.peeking_frequency, args.min_sample_size)
 
     accept = [[], []]
-    with peeking.concurrent.run(peeking.concurrent.InstanceMethod(algorithm.decision), args.runs, ((args.sample_size,),)) as results:
+    with peeking.concurrent.run(algorithm.decision, args.runs, ((args.sample_size,),)) as results:
         for r in results:
             if r:
                 winner, i = r
